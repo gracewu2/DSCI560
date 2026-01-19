@@ -18,7 +18,7 @@ market_items = soup.find_all(class_="MarketCard-container")
 for item in market_items:
     symbol = item.find(class_="MarketCard-symbol")
     position = item.find(class_="MarketCard-stockPosition")
-    change = item.find(class_="MarketCard-changePct")
+    change = item.find(class_="MarketCard-changesPct")
     
     if symbol and position and change:
         market_data.append([
