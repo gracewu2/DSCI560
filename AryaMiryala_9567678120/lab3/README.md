@@ -1,4 +1,4 @@
-# ⚡ Accelerated Computing: High-Performance Matrix Operations & Python Integration
+# Accelerated Computing: High-Performance Matrix Operations & Python Integration
 
 ### Project Overview
 This project is an exploration into the world of **GPGPU (General-Purpose computing on Graphics Processing Units)**. The goal was to investigate the performance limits of standard CPU-based algorithms and leverage **NVIDIA's CUDA** architecture to achieve massive parallel speedups. 
@@ -6,11 +6,11 @@ This project is an exploration into the world of **GPGPU (General-Purpose comput
 Starting from a pure C baseline, I developed and benchmarked several GPU acceleration strategies, ultimately creating a portable shared library that allows high-speed CUDA kernels to be invoked directly from a **Python** environment.
 
 ### Technical Milestones
-* [cite_start]**Architectural Analysis:** Developed a baseline triple-nested loop implementation in C to establish CPU performance metrics[cite: 12].
-* [cite_start]**Parallel Kernel Design:** Engineered a naïve CUDA kernel to map matrix operations across thousands of GPU threads simultaneously[cite: 52, 53].
-* [cite_start]**Shared Memory Optimization:** Implemented **Shared Memory Tiling** to minimize global memory latency, significantly increasing memory throughput[cite: 89, 90].
-* [cite_start]**Library Engineering:** Built a shared library (`.so`) using `nvcc` with a C-style interface, enabling seamless integration with Python's `ctypes`[cite: 153, 154].
-* [cite_start]**Industry Standards:** Benchmarked hand-written kernels against **cuBLAS**, NVIDIA's premier linear algebra library, to analyze optimization gaps[cite: 136, 137].
+* **Architectural Analysis:** Developed a baseline triple-nested loop implementation in C to establish CPU performance metrics[cite: 12].
+* **Parallel Kernel Design:** Engineered a naïve CUDA kernel to map matrix operations across thousands of GPU threads simultaneously[cite: 52, 53].
+* **Shared Memory Optimization:** Implemented **Shared Memory Tiling** to minimize global memory latency, significantly increasing memory throughput[cite: 89, 90].
+* **Library Engineering:** Built a shared library (`.so`) using `nvcc` with a C-style interface, enabling seamless integration with Python's `ctypes`[cite: 153, 154].
+* **Industry Standards:** Benchmarked hand-written kernels against **cuBLAS**, NVIDIA's premier linear algebra library, to analyze optimization gaps[cite: 136, 137].
 
 ### Performance Deep Dive ($N=2048$)
 The following results were benchmarked on an **NVIDIA Tesla T4 GPU**:
@@ -25,12 +25,12 @@ The following results were benchmarked on an **NVIDIA Tesla T4 GPU**:
 
 
 ### Technology Stack
-* [cite_start]**Low-Level:** C, CUDA C++ [cite: 13, 51]
-* [cite_start]**High-Level:** Python, NumPy [cite: 231, 232]
-* [cite_start]**Interface:** Ctypes (Shared Libraries) [cite: 155]
-* [cite_start]**Tooling:** NVCC Compiler, Google Cloud Platform / Colab [cite: 75, 84]
+* **Low-Level:** C, CUDA C++ [cite: 13, 51]
+* **High-Level:** Python, NumPy [cite: 231, 232]
+* **Interface:** Ctypes (Shared Libraries) [cite: 155]
+* **Tooling:** NVCC Compiler, Google Cloud Platform / Colab [cite: 75, 84]
 
-### 📂 Repository Contents
+### Repository Contents
 * `matrix_cpu.c`: The CPU-bound baseline implementation.
 * `matrix_gpu.cu`: Entry-level parallelization using CUDA.
 * `matrix_tiled.cu`: Advanced implementation utilizing GPU shared memory.
