@@ -25,10 +25,10 @@ The following results were benchmarked on an **NVIDIA Tesla T4 GPU**:
 
 
 ### Technology Stack
-* **Low-Level:** C, CUDA C++ [cite: 13, 51]
-* **High-Level:** Python, NumPy [cite: 231, 232]
-* **Interface:** Ctypes (Shared Libraries) [cite: 155]
-* **Tooling:** NVCC Compiler, Google Cloud Platform / Colab [cite: 75, 84]
+* **Low-Level:** C, CUDA C++ 
+* **High-Level:** Python, NumPy 
+* **Interface:** Ctypes (Shared Libraries) 
+* **Tooling:** NVCC Compiler, Google Cloud Platform / Colab
 
 ### Repository Contents
 * `matrix_cpu.c`: The CPU-bound baseline implementation.
